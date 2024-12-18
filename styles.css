@@ -1,0 +1,253 @@
+/* Estilos básicos para o site */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.produtos,
+.destaques,
+.carrinho {
+    margin: 20px 0;
+}
+
+.produto {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.btn-remover {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-remover:hover {
+    background-color: #000000;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    /* Normal */
+    line-height: 1.6;
+    /* Melhor espaçamento entre linhas */
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    /* Um pouco mais encorpado */
+    color: #666;
+    /* Cor delicada */
+}
+
+p {
+    font-weight: 400;
+    color: #e0e0e0;
+}
+
+/* Estilo para categorias */
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo para cada produto (mantém o anterior) */
+.produto {
+    border-radius: 0;
+    /* Remove bordas arredondadas */
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: none;
+    /* Remove sombra */
+    background: none;
+    /* Remove o fundo */
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #666;
+    /* Mantém a cor delicada */
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #ffffff;
+    /* Cinza delicado */
+    margin-bottom: 10px;
+}
+
+.produto button {
+    padding: 8px 12px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(20px);
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+
+
+
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.categoria {
+    min-width: 100%;
+    position: relative;
+}
+
+.categoria img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    /* Faz a imagem ser clicável */
+}
+
+.categoria-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

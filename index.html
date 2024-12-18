@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lumesol - Loja de Pratas</title>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="itens/logo.png" alt="Lumesol Logo" class="logo">
+        </div>
+        <nav>
+            <a href="produtos.html">Produtos</a>
+            <a href="carrinho.html">Carrinho</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaques">
+            <h1>Descubra a Beleza de Nossas Peças</h1>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="categoria">
+                        <a href="produtos.html?categoria=pulseiras">
+                            <img src="Produtos/pulseiras/Pulseira Elo coração.JPG" alt="Pulseiras">
+                        </a>
+
+                    </div>
+                    <div class="categoria">
+                        <a href="produtos.html?categoria=aneis">
+                            <img src="Produtos/anel/Anel Relevo Luminoso.JPG" alt="Anéis">
+                        </a>
+
+                    </div>
+                    <div class="categoria">
+                        <a href="produtos.html?categoria=colares">
+                            <img src="Produtos/colares/Colar Tiffany.JPG" alt="Colares">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lumesol - Loja de Pratas</p>
+    </footer>
+
+    <script>
+        let index = 0;
+        const carrossel = document.querySelector('.carrossel');
+        const totalCategorias = document.querySelectorAll('.categoria').length;
+
+        // Função para mudar a categoria
+        function changeCategory() {
+            index = (index + 1) % totalCategorias;
+            carrossel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Trocar de categoria a cada 5 segundos
+        setInterval(changeCategory, 2000);
+    </script>
+</body>
+
+</html>
