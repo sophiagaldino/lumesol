@@ -37,7 +37,7 @@ function finalizarCompra() {
         return;
     }
     let produtos = carrinho.map(produto => `${produto.nome} - R$ ${produto.preco}`).join('%0A');
-    let mensagem = `Olá, gostaria de comprar:%0A${produtos}`;
+    let mensagem = `Olá, gostaria de comprar:${produtos}`;
     let linkWhatsApp = `https://wa.me/558197771883?text=${encodeURIComponent(mensagem)}`;
     window.location.href = linkWhatsApp;
 }
